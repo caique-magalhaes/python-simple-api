@@ -122,3 +122,33 @@ http://127.0.0.1:8000/docs
 
 <p>Uma resposta com status 200 e com o retorno que vc definiu.</p>
 
+
+<h2>Buscando um Usuario</h2>
+<p>Feito os passos acima agora vamos implementar usando o metodo get que nos vai retornar atraves de uma busca pelo nome e nos retornara o seus dados, segue o codigo abaixo</p>
+
+```
+@app.get('/user/{nome}')
+def get_user(nome:str):
+
+    for usuario in user_list:
+        if(usuario.name == nome):
+            return {"data":usuario}
+
+    return {"data":user_list}  
+```
+<p>O codigo vai percorrer a lista user_list e comparar com o nome da minha requisicao no caminho "nome" e quando encontrar retornara o dados do usuario. Entre no doc do fastapi e http://127.0.0.1:8000/docs e adicione usuario utilizando o metodo acima e depois entre no caminho /user/{nome}.</p>
+
+![imagem doc fastapi](https://i.imgur.com/B161t8q.png)
+
+<p>Ao clicar no link aparecera um espaco em branco para digitar o nome que deseja procura digite um nome que voce adicionou utilizando o exemplo acima e clique em executar.</p>
+
+<p>Como voce passou o caminho o {nome} tambem funcionara se voce na sua barra de pesquisa digitar http://127.0.0.1:8000/user/{nome} claro no lugar do {nome} voce ira digitar o nome que voce procura tipo http://127.0.0.1:8000/user/Carlos</p>
+
+![imagem doc fastapi](https://i.imgur.com/HLjAQwZ.png)
+
+<p>E voce obtera o retorno com status 200 e com os dados do nome que vc procurou.</p>
+
+![imagem doc fastapi](https://i.imgur.com/Ig68rlV.png)
+
+<h2>Conclusao</h2>
+<p>Pronto voce acabou de fazer uma api utilizando o FastApi Adicionando usuarios e retornando usuarios pelo nome procurado, com FastApi ficou bem simples ne?.</p>

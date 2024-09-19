@@ -140,7 +140,7 @@ def get_user(nome:str):
 
 ![imagem doc fastapi](https://i.imgur.com/B161t8q.png)
 
-<p>Ao clicar no link aparecera um espaco em branco para digitar o nome que deseja procura digite um nome que voce adicionou utilizando o exemplo acima e clique em executar.</p>
+<p>Ao clicar no link aparecera um espaco em branco para digitar o nome que deseja procurar digite um nome que voce adicionou utilizando o exemplo acima e clique em executar.</p>
 
 <p>Como voce passou o caminho o {nome} tambem funcionara se voce na sua barra de pesquisa digitar http://127.0.0.1:8000/user/{nome} claro no lugar do {nome} voce ira digitar o nome que voce procura tipo http://127.0.0.1:8000/user/Carlos</p>
 

@@ -35,7 +35,7 @@ mac -> venv/bin/activate
 ```
 pip install fastapi
 ```
-<h2>Create a API.</h2>
+<h2>Create an API.</h2>
 <p>Once FastApi is installed, we will create a file called app.py and import FastApi into it.</p>
 
 ```
@@ -106,7 +106,7 @@ class User(BaseModel):
 
 <h2>Creating a Path to Add a User.</h2>
 
-<p>Once the user model is created, we will create the path using the POST method to add the user and pass the User class as a request in the user class. After that, we will add this user to our user_list and finally return a dictionary or object with "status" and "date" from our user_list.</p>
+<p>Once the user model is created, we will create the path using the POST method to add the user and pass the User class as a request in the user class. After that, we will add this user to our user_list and finally return a dictionary or object with "status" and "data" from our user_list.</p>
 
 ```
 @app.post('/add/user/')
